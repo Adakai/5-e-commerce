@@ -6,13 +6,13 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case GET_PRODUCTS:
       return {
         ...state,
         items: action.payload
-      }
+      };
     default:
-      return state;  
+      return state;
   }
 }
