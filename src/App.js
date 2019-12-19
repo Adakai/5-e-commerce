@@ -4,12 +4,14 @@ import Navbar from './components/layout/Navbar';
 import { Provider } from 'react-redux'
 import store from './store';
 import Products from './components/product/Products';
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
     <Provider store={store}>
       <Navbar />
       <Products />
+      <Footer />
     </Provider>
   );
 }
