@@ -2,7 +2,7 @@
 
 #backgroundColor {
   background-color: $primary-color;
-  margin-bottom: 40px;
+  height: 50px;
 }
 
 #bold {
@@ -11,11 +11,11 @@
 }
 
 #imgSize {
-  width: 220px;
+  width: 200px;
 }
 
 @media screen and (max-width: 600px) {
   #imgSize {
-    width: 160px;
+    width: 140px;
   }
 }

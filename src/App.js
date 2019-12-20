@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import React from 'react';
 import Navbar from './components/layout/Navbar';
 import Products from './components/product/Products';
 import Product from './components/product/Product';
 import Cart from './components/pages/Cart';
 import Login from './components/pages/Login';
 import Footer from './components/layout/Footer';
-import { Provider } from 'react-redux';
 import store from './store';
-import React from 'react';
 import './App.scss';
 
 function App() {

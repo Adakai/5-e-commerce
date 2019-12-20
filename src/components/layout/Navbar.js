@@ -1,15 +1,12 @@
 import React, { Fragment } from '../../../node_modules/react';
-import styles from './Navbar.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './Navbar.module.scss';
 import logo from '../../logo.png';
 
 const Navbar = () => {
   return (
     <Fragment>
-      <div
-        id={styles.backgroundColor}
-        className='navbar navbar-expand navbar-light'
-      >
+      <div id={styles.backgroundColor} className='navbar navbar-expand navbar-light fixed-top'>
         <div className='container'>
           <Link id={styles.bold} className='navbar-brand' to='/'>
             <img id={styles.imgSize} src={logo} alt='Swift Commerce' />
