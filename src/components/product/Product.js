@@ -7,7 +7,7 @@ import styles from './Product.module.scss';
 class Product extends Component {
   handleClick = (id) => {
     this.props.addProduct(
-      this.props.products[id]
+      this.props.products[id - 1]
     );
   }
 
