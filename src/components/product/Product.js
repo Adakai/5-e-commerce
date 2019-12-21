@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchProducts } from '../../actions/getActions';
 import { connect } from 'react-redux';
+import { addProduct } from '../../actions/addActions';
 import styles from './Product.module.scss';
 
 class Product extends Component {
-  componentDidMount() {
-    this.props.fetchProducts();
+  handleClick = (id) => {
+    this.props.addProduct(
+      this.props.products[id]
+    );
   }
 
   render() {
@@ -33,7 +35,7 @@ class Product extends Component {
                   <h6 className='card-text font-weight-bold text-center'>Price: {productItem.price}</h6>
                   <div id={styles.width} className='mt-5 d-flex align-items-center justify-content-around'>
                     <Link to='/' type="button" className="btn btn-dark">Go Back</Link>
-                    <button type="button" className="btn btn-dark">Add To Cart</button>
+                    <button onClick={() => this.handleClick(productItem.id)} type="button" className="btn btn-dark">Add To Cart</button>
                   </div>
                 </div>
               </div>
@@ -49,4 +51,4 @@ const mapStateToProps = state => ({
   products: state.products.items
 });
 
-export default connect(mapStateToProps, { fetchProducts })(Product);
+export default connect(mapStateToProps, { addProduct } )(Product);
