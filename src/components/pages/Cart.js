@@ -34,9 +34,17 @@ class Cart extends Component {
             </div>
           </div>
         </div>
+        
       </Fragment>
     ));
-    return <div>{items}</div>;
+    return (
+    <div>
+      {items}
+      <div className='d-flex justify-content-center'>
+        <button className='btn btn-dark'>Check Out</button>
+      </div>
+    </div>
+    );
   }
 }
 
