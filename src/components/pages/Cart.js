@@ -1,13 +1,16 @@
 import React, { Component, Fragment } from 'react';
-// import { addProduct } from '../../actions/addActions';
-import styles from '../product/Product';
+import styles from './Cart.module.scss';
 import { connect } from 'react-redux';
-// import store from '../../store'
+import { deleteProduct } from '../../actions/deleteAction'
 
 class Cart extends Component {
+  handleClickDelete = (id) => {
+    let productToDelete = this.props.products.map(item => { return item.id }).indexOf(id)
+    this.props.deleteProduct(productToDelete)
+  }
   render() {
-    console.log(this.props.products.item);
-    let items = this.props.products.item.map(item => (
+    console.log(this.props.products)
+    let items = this.props.products.map(item => (
       <Fragment key={item.id}>
         <div className='mt-5 mb-5' id={styles.myContainer}>
           <div
@@ -23,7 +26,8 @@ class Cart extends Component {
                   <h5 className='mt-4 card-title font-weight-bold text-center'>{item.title}</h5>
                   <h6 className='card-text font-weight-bold text-center'>Price: {item.price}</h6>
                   <div id={styles.width} className='mt-5 d-flex align-items-center justify-content-around'>
-                    <button className='btn-dark'>Delete Item</button>
+                    <button className='btn btn-dark'>Update</button>
+                    <button onClick={() => this.handleClickDelete(item.id)} className='btn btn-dark'>Delete Item</button>
                   </div>
                 </div>
               </div>
@@ -32,17 +36,12 @@ class Cart extends Component {
         </div>
       </Fragment>
     ));
-    console.log(items);
     return <div>{items}</div>;
   }
 }
 
-// store.subscribe(() => {
-//   console.log(store.getState())
-// });
-
 const mapStateToProps = state => ({
-  products: state.products
+  products: state.products.item
 });
 
-export default connect(mapStateToProps, null)(Cart);
+export default connect(mapStateToProps, { deleteProduct })(Cart);

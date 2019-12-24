@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, ADD_PRODUCT } from '../actions/types';
+import { GET_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT } from '../actions/types';
 
 const initialState = {
   items: [],
@@ -17,6 +17,15 @@ export default function(state = initialState, action) {
         ...state,
         item: [...state.item, action.payload]
       }
+    case DELETE_PRODUCT:
+      const newState = [...state.item.slice(0, action.payload),
+        ...state.item.slice(action.payload + 1)
+      ]
+      console.log(newState)
+      return {
+        ...state,
+        item: newState
+      };
     default:
       return state;
   }
