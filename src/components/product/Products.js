@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../actions/getActions';
 import styles from './Products.module.scss';
+import Categories from './Categories'
 
 class Products extends Component {
   componentDidMount() {
@@ -25,9 +26,12 @@ class Products extends Component {
     ));
 
     return (
-      <div id={styles.myMargin} className='container d-flex flex-wrap justify-content-center align-items-center'>
-        {productItems}
-      </div>
+      <Fragment>
+        <Categories />
+        <div id={styles.myMargin} className='container d-flex flex-wrap justify-content-center align-items-center'>
+          {productItems}
+        </div>
+      </Fragment>
     );
   }
 }

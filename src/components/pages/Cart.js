@@ -41,7 +41,7 @@ class Cart extends Component {
     <div>
       {items}
       <div className='d-flex justify-content-center'>
-        <button className='btn btn-dark'>Check Out</button>
+        <button className='btn btn-dark mb-5'>Check Out</button>
       </div>
     </div>
     );
