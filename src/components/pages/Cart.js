@@ -13,12 +13,12 @@ class Cart extends Component {
       <Fragment key={item.id}>
         <div className='mt-5 mb-5' id={styles.myContainer}>
           <div
-            className='card container p-4'
+            className='mt-5 mb-5 card container p-4'
             style={{ maxWidth: '800px' }}
           >
             <div className='row no-gutters'>
               <div className='col-md-4'>
-                <img src={item.img} className='card-img' alt='product' />
+                <img id={styles.imgSize} src={item.img} className='card-img' alt='product' />
               </div>
               <div className='col-md-8'>
                 <div id={styles.height} className='ml-3 card- d-flex flex-column align-items-center justify-content-center'>
@@ -36,7 +36,7 @@ class Cart extends Component {
       </Fragment>
     ));
     return (
-    <div>
+    <div className='mt-5 mb-5 d-flex justify-content-center flex-column align-items-center'>
       {items}
       <div className='d-flex justify-content-center'>
         <button className='btn btn-dark mb-5'>Check Out</button>

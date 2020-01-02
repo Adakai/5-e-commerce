@@ -25,7 +25,7 @@ class Product extends Component {
           >
             <div className='row no-gutters'>
               <div className='col-md-4'>
-                <img src={productItem.img} className='card-img' alt='product' />
+                <img id={styles.imgSize} src={productItem.img} className='card-img' alt='product' />
               </div>
               <div className='col-md-8'>
                 <div id={styles.height} className='ml-3 card- d-flex flex-column align-items-center justify-content-center'>
