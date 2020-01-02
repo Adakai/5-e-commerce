@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchCategories } from '../../actions/getActions';
+import { Link } from 'react-router-dom';
 import styles from './Categories.module.scss';
 import { connect } from 'react-redux';
 
@@ -9,14 +10,13 @@ class Categories extends Component {
   }
 
   render() {
-    console.log(this.props.products[0]);
     const options = this.props.products.map((category, idx) => (
-      <button key={idx} className='dropdown-item' type='button'>
+      <Link to={'/category/' + category} key={idx} className='dropdown-item' type='button'>
         {category}
-      </button>
+      </Link>
     ));
     return (
-      <div id={styles.margin} class='btn-group d-flex justify-content-center'>
+      <div id={styles.margin} className='btn-group d-flex justify-content-center'>
         <button
           type='button'
           className='btn btn-dark dropdown-toggle'

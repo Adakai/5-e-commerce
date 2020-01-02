@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Products from './components/product/Products';
 import Product from './components/product/Product';
 import Cart from './components/pages/Cart';
+import Category from './components/product/Category'
 import Login from './components/pages/Login';
 import Footer from './components/layout/Footer';
 import store from './store';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/cart' component={Cart}></Route>
           <Route path='/login' component={Login}></Route>
           <Route path='/product/:productId' component={Product}></Route>
+          <Route path='/category/:categoryId' component={Category}></Route>
         </Switch>
         <Footer />
       </Router>

@@ -3,7 +3,7 @@ import { GET_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT, GET_CATEGORIES } from '../ac
 const initialState = {
   items: [],
   item: [],
-  categories: []
+  categories: [],
 };
 
 export default function(state = initialState, action) {
