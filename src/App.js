@@ -5,7 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Products from './components/product/Products';
 import Product from './components/product/Product';
 import Cart from './components/pages/Cart';
-import Category from './components/product/Category'
+import Category from './components/pages/Category'
 import Login from './components/pages/Login';
 import Footer from './components/layout/Footer';
 import store from './store';

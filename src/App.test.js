@@ -21,30 +21,10 @@ describe('App', () => {
         true
       );
     });
-    it('should have a `input` element', () => {
-      expect(wrapper.containsMatchingElement(<input />)).toBe(true);
-    });
-    it('`button` should be disabled', () => {
-      const button = wrapper.find('button').first();
-      const actual = button.props().disabled;
-      expect(actual).toBe(true);
-    });
   });
   describe('user interaction', () => {
-    const item = 'qwerty'
-    beforeEach(() => {
-      const input = wrapper.find('input').first();
-      input.simulate('change', {
-        target: { value: item }
-      });
-    });
     it('should update the state property `item`', () => {
       expect(wrapper.state().item).toEqual(item);
-    });
-    it('should enable `button`', () => {
-      const button = wrapper.find('button').first();
-      const actual = button.props().disabled;
-      expect(actual).toBe(false);
     });
   });
 });
