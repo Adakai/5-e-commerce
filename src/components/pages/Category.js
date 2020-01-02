@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import store from '../../store';
 import styles from './Category.module.scss';
+import Categories from '../product/Categories'
 
 export class Category extends Component {
  
@@ -28,6 +29,7 @@ export class Category extends Component {
 
     return (
       <Fragment>
+        <Categories />
         <div className='mt-5 mb-5 container d-flex flex-wrap justify-content-center align-items-center'>
           {categoryItems}
         </div>

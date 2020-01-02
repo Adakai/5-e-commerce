@@ -22,7 +22,6 @@ export default function(state = initialState, action) {
       const newState = [...state.item.slice(0, action.payload),
         ...state.item.slice(action.payload + 1)
       ]
-      console.log(newState)
       return {
         ...state,
         item: newState

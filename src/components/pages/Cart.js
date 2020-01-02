@@ -9,7 +9,6 @@ class Cart extends Component {
     this.props.deleteProduct(productToDelete)
   }
   render() {
-    console.log(this.props.products)
     let items = this.props.products.map(item => (
       <Fragment key={item.id}>
         <div className='mt-5 mb-5' id={styles.myContainer}>
@@ -34,7 +33,6 @@ class Cart extends Component {
             </div>
           </div>
         </div>
-        
       </Fragment>
     ));
     return (

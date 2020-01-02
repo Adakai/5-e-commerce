@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Products from './components/product/Products';
 import Product from './components/product/Product';
 import Cart from './components/pages/Cart';
 import Category from './components/pages/Category'
 import Login from './components/pages/Login';
-import Footer from './components/layout/Footer';
 import store from './store';
 import './App.scss';
 
