@@ -9,11 +9,16 @@ class Cart extends Component {
     this.props.deleteProduct(productToDelete)
   }
   render() {
-    let items = this.props.products.map(item => (
+    const checkoutBtn = (
+      <div className='d-flex justify-content-center'>
+        <button className='btn btn-dark mb-5'>Check Out</button>
+      </div>
+    );
+    const items = this.props.products.map(item => (
       <Fragment key={item.id}>
         <div className='mt-5 mb-5' id={styles.myContainer}>
           <div
-            className='mt-5 mb-5 card container p-4'
+            className='card container p-4'
             style={{ maxWidth: '800px' }}
           >
             <div className='row no-gutters'>
@@ -38,9 +43,7 @@ class Cart extends Component {
     return (
     <div className='mt-5 mb-5 d-flex justify-content-center flex-column align-items-center'>
       {items}
-      <div className='d-flex justify-content-center'>
-        <button className='btn btn-dark mb-5'>Check Out</button>
-      </div>
+      {(this.props.products.length === 0 ? <div id={styles.nothingInCart} className='mt-5'>Nothing in your cart...</div> : checkoutBtn)}
     </div>
     );
   }
