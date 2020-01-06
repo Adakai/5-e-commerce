@@ -1,4 +1,4 @@
-import { ADD_PRODUCT } from './types';
+import { ADD_PRODUCT, ADD_USER } from './types';
 
 export const addProduct = (item) => dispatch => {
   dispatch({
@@ -6,3 +6,10 @@ export const addProduct = (item) => dispatch => {
     payload: item
   });
 };
+
+export const addUser = (user) => dispatch => {
+  dispatch({
+    type: ADD_USER,
+    payload: user
+  });
+}

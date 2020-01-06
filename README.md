@@ -1,3 +1,10 @@
+# Username and Password for mock login
+
+username: admin
+password: password
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

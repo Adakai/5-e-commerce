@@ -31,7 +31,7 @@ class Cart extends Component {
                   <h6 className='card-text font-weight-bold text-center'>Price: {item.price}</h6>
                   <div id={styles.width} className='mt-5 d-flex align-items-center justify-content-around'>
                     <button className='btn btn-dark'>Update</button>
-                    <button onClick={() => this.handleClickDelete(item.id)} className='btn btn-dark'>Delete Item</button>
+                    <button onClick={() => this.handleClickDelete(item.id)} className='btn btn-danger'>Delete Item</button>
                   </div>
                 </div>
               </div>
