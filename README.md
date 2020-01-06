@@ -1,7 +1,7 @@
 # Username and Password for mock login
 
-username: admin
-password: password
+### username: admin
+### password: password
 
 
 
