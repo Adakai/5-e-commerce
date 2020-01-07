@@ -7,7 +7,7 @@
 
 ## After install make sure to run `npm install`
 
-### if you have troup you might need to delete package.lock.json file and re run `npm install`
+### if you have trouble you might need to delete package.lock.json file and re run `npm install`
 
 #
 
