@@ -4,6 +4,10 @@
 ### password: password
 
 
+# Github pages link below
+
+https://adakai.github.io/5-e-commerce/
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
