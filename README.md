@@ -1,13 +1,15 @@
 # Username and Password for mock login
 
-### username: admin
-### password: password
+### `username: admin`
+### `password: password`
 
+#
 
-# Github pages link below
+## After install make sure to run `npm install`
 
-https://adakai.github.io/5-e-commerce/
+### if you have troup you might need to delete package.lock.json file and re run `npm install`
 
+#
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
