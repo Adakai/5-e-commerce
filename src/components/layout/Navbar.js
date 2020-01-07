@@ -4,11 +4,7 @@ import styles from './Navbar.module.scss';
 import { connect } from 'react-redux';
 import logo from '../../logo.png';
 
-class Navbar extends Component {
-  componentDidMount() {
-    console.log(this.props.products)
-  }
-  
+class Navbar extends Component {  
   render () {
     return (
       <Fragment>
